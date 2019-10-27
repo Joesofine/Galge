@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorMoonstone">#3aa8c1</color>
+    <color name="colorMoonstoneDark">#2e869a</color>
+    <color name="colorDark">#111a1d </color>
+    <color name="colorMoonstoneLight">#68bed2  </color>
+
+</resources>
