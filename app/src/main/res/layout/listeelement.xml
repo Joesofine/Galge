@@ -3,25 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/liste_gradient"
     android:padding="5dp">
 
     <TextView
         android:id="@+id/listeelem_overskrift"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="overskrift"
-        android:textColor="#0F0707"
-        android:textSize="18sp"
+        android:textColor="#BEEBE8E8"
+        android:textSize="24sp"
         android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/listeelem_beskrivelse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/listeelem_overskrift"
-        android:text="Heeej heeej"
-        android:textColor="#070101"
-        android:textSize="12sp" />
 
 </RelativeLayout>

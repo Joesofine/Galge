@@ -12,7 +12,7 @@ import java.util.Random;
 public class Galgelogik {
 
     /** AHT afprøvning er muligeOrd synlig på pakkeniveau */
-    ArrayList<String> muligeOrd = new ArrayList<String>();
+    private ArrayList<String> muligeOrd = new ArrayList<String>();
     private String ordet;
     private ArrayList<String> brugteBogstaver = new ArrayList<String>();
     private String synligtOrd;
@@ -34,6 +34,10 @@ public class Galgelogik {
         nulstil();
     }
 
+
+    public ArrayList<String> getMuligeOrd() {
+        return muligeOrd;
+    }
 
     public ArrayList<String> getBrugteBogstaver() {
         return brugteBogstaver;

@@ -12,15 +12,17 @@ import android.widget.Toast;
 public class Ordliste extends AppCompatActivity {
 
     ListView listView;
+    Galgelogik logik = new Galgelogik();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ordliste);
 
-        String[] lande = { "Danmark", "Norge", "Sverige"};
+        String[] lande = {"Danmark", "Norge", "Sverige", "Finland", "Holland", "Italien", "Tyskland",
+                "Frankrig", "Spanien", "Portugal", "Nepal", "Indien", "Kina", "Japan", "Thailand"};
 
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.listeelement, R.id.listeelem_overskrift, lande);
+        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.listeelement, R.id.listeelem_overskrift, logik.getMuligeOrd());
 
         listView = findViewById(R.id.listView1);
         listView.setAdapter(adapter);
