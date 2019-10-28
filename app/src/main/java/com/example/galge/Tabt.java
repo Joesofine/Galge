@@ -13,8 +13,6 @@ public class Tabt extends AppCompatActivity {
     Button again;
     TextView ord;
 
-    Galgelogik logik = new Galgelogik();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

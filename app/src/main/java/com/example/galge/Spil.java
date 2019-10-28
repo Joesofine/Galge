@@ -19,6 +19,7 @@ public class Spil extends AppCompatActivity {
     ImageView galge;
     int i = 0;
     String ordet;
+    String forkerte;
 
 
     @Override
@@ -49,14 +50,6 @@ public class Spil extends AppCompatActivity {
                 in.setError(null);
                 ord.setText(logik.getSynligtOrd());
 
-                if (logik.erSpilletTabt()) {
-                    Bundle whatever = new Bundle();
-                    whatever.putString("ord", ordet);
-                    Intent intent = new Intent(getApplicationContext(), Tabt.class);
-                    intent.putExtras(whatever);
-                    startActivity(intent);
-                }
-
                 if (!logik.erSidsteBogstavKorrekt()) {
                     i = i + 1;
 
@@ -83,7 +76,20 @@ public class Spil extends AppCompatActivity {
         regler.setText("\n\nDu har " + logik.getAntalForkerteBogstaver() + " forkerte:" + logik.getBrugteBogstaver());
 
         if (logik.erSpilletVundet()) {
-            regler.append("\nDu har vundet");
+            forkerte = String.valueOf(logik.getAntalForkerteBogstaver());
+
+            Bundle fejl = new Bundle();
+            fejl.putString("forkert", forkerte);
+            Intent intent = new Intent(getApplicationContext(), Vundet.class);
+            intent.putExtras(fejl);
+            startActivity(intent);
+        }
+        if (logik.erSpilletTabt()) {
+            Bundle whatever = new Bundle();
+            whatever.putString("ord", ordet);
+            Intent intent = new Intent(getApplicationContext(), Tabt.class);
+            intent.putExtras(whatever);
+            startActivity(intent);
         }
     }
 }
