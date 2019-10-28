@@ -2,6 +2,7 @@ package com.example.galge;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +16,9 @@ public class Spil extends AppCompatActivity {
     Button test;
     TextView regler, ord;
     EditText in;
-    int i = 0;
     ImageView galge;
-
+    int i = 0;
+    String ordet;
 
 
     @Override
@@ -31,7 +32,11 @@ public class Spil extends AppCompatActivity {
         galge = findViewById(R.id.galge);
         in = findViewById(R.id.in);
 
+
         ord.setText(logik.getSynligtOrd());
+
+
+        ordet = logik.getOrdet();
 
         logik.logStatus(); // Så vi kan se det rigtige ord i loggen
 
@@ -44,23 +49,30 @@ public class Spil extends AppCompatActivity {
                 in.setError(null);
                 ord.setText(logik.getSynligtOrd());
 
+                if (logik.erSpilletTabt()) {
+                    Bundle whatever = new Bundle();
+                    whatever.putString("ord", ordet);
+                    Intent intent = new Intent(getApplicationContext(), Tabt.class);
+                    intent.putExtras(whatever);
+                    startActivity(intent);
+                }
+
                 if (!logik.erSidsteBogstavKorrekt()) {
                     i = i + 1;
 
-                    if (i==1)
+                    if (i == 1)
                         galge.setImageResource(R.drawable.forkert1);
-                    else if (i==2)
+                    else if (i == 2)
                         galge.setImageResource(R.drawable.forkert2);
-                    else if (i==3)
+                    else if (i == 3)
                         galge.setImageResource(R.drawable.forkert3);
-                    else if (i==4)
+                    else if (i == 4)
                         galge.setImageResource(R.drawable.forkert4);
-                    else if (i==5)
+                    else if (i == 5)
                         galge.setImageResource(R.drawable.forkert5);
-                    else if (i==6)
+                    else if (i == 6)
                         galge.setImageResource(R.drawable.forkert6);
                 }
-
                 opdaterSkærm();
             }
         });
@@ -73,10 +85,7 @@ public class Spil extends AppCompatActivity {
         if (logik.erSpilletVundet()) {
             regler.append("\nDu har vundet");
         }
-        if (logik.erSpilletTabt()) {
-            regler.setText("Du har tabt, ordet var : " + logik.getOrdet());
-        }
-
     }
 }
+
 

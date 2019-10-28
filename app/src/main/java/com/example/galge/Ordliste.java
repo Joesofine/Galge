@@ -19,9 +19,6 @@ public class Ordliste extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ordliste);
 
-        String[] lande = {"Danmark", "Norge", "Sverige", "Finland", "Holland", "Italien", "Tyskland",
-                "Frankrig", "Spanien", "Portugal", "Nepal", "Indien", "Kina", "Japan", "Thailand"};
-
         ArrayAdapter adapter = new ArrayAdapter(this, R.layout.listeelement, R.id.listeelem_overskrift, logik.getMuligeOrd());
 
         listView = findViewById(R.id.listView1);
