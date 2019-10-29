@@ -34,7 +34,7 @@
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
         android:text="Velkommen til Galge"
-        android:textColor="#EEEEEE"
+        android:textColor="#0C0101"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
