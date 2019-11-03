@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Vundet"></activity>
+        <activity android:name=".Niveau"></activity>
+        <activity android:name=".Vundet" />
         <activity android:name=".Ordliste" />
         <activity android:name=".Meme" />
         <activity android:name=".Spil" />

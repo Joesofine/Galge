@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Hovedemenu extends AppCompatActivity {
 
-   Button ins, start, hjalp, liste;
+   Button ins, start, hjalp, liste, niveau;
    TextView velkommen;
 
 
@@ -24,6 +24,7 @@ public class Hovedemenu extends AppCompatActivity {
         hjalp = findViewById(R.id.hjalp);
         velkommen = findViewById(R.id.textView);
         liste = findViewById(R.id.liste);
+        niveau =findViewById(R.id.niveau);
 
 
         ins.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +59,12 @@ public class Hovedemenu extends AppCompatActivity {
             }
         });
 
-
+        niveau.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Niveau.class);
+                startActivity(intent);
+            }
+        });
     }
 }

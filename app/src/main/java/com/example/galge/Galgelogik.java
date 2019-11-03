@@ -46,7 +46,27 @@ public class Galgelogik {
     public String getSynligtOrd() {
         return synligtOrd;
     }
+/**
+    public String setSynligtOrd(String ord) {
+        synligtOrd = "";
+        spilletErVundet = true;
+        for (int n = 0; n < ord.length(); n++) {
+            String bogstav = ord.substring(n, n + 1);
+            if (brugteBogstaver.contains(bogstav)) {
+                synligtOrd = synligtOrd + bogstav;
+            } else {
+                synligtOrd = synligtOrd + "_ ";
+                spilletErVundet = false;
+            }
+        }
+        return synligtOrd;
+    } */
 
+
+public String setOrdet(String ord) {
+        ordet = ord;
+        return ordet;
+    }
     public String getOrdet() {
         return ordet;
     }
@@ -70,7 +90,6 @@ public class Galgelogik {
     public boolean erSpilletSlut() {
         return spilletErTabt || spilletErVundet;
     }
-
 
     public void nulstil() {
         brugteBogstaver.clear();
@@ -182,7 +201,7 @@ public class Galgelogik {
      */
 
     public void hentOrdFraRegneark(String sværhedsgrader) throws Exception {
-        String id = "1RnwU9KATJB94Rhr7nurvjxfg09wAHMZPYB3uySBPO6M";
+        String id = "15uB64aBX8F8zlazzz0I19sGH27nH8DqOJxJmb6cyjzQ";
 
         System.out.println("Henter data som kommasepareret CSV fra regnearket https://docs.google.com/spreadsheets/d/"+id+"/edit?usp=sharing");
 
@@ -191,13 +210,12 @@ public class Galgelogik {
 
         muligeOrd.clear();
         for (String linje : data.split("\n")) {
-            if (linjeNr<20) System.out.println("linje = " + linje); // udskriv de første 20 linjer
-            if (linjeNr++ < 1 ) continue; // Spring første linje med kolonnenavnene over
             String[] felter = linje.split(",", -1);// -1 er for at beholde tomme indgange, f.eks. bliver ",,," splittet i et array med 4 tomme strenge
             String sværhedsgrad = felter[0].trim();
             String ordet = felter[1].trim().toLowerCase();
             if (ordet.isEmpty()) continue; // spring over linjer med tomme ord
             if (!sværhedsgrader.contains(sværhedsgrad)) continue; // filtrér på sværhedsgrader
+            if (sværhedsgrad.isEmpty()) continue;
             muligeOrd.add(ordet);
         }
 

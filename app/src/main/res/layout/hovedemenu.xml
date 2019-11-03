@@ -12,17 +12,30 @@
         android:layout_width="115dp"
         android:layout_height="75dp"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginRight="153dp"
         android:background="@drawable/button_gradient"
         android:text="liste"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/hjalp"
-        app:layout_constraintStart_toEndOf="@+id/ins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/niveau"
         app:layout_constraintTop_toBottomOf="@+id/start" />
+
+    <Button
+        android:id="@+id/niveau"
+        android:layout_width="115dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_gradient"
+        android:text="Niveau"
+        app:layout_constraintEnd_toStartOf="@+id/liste"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ins" />
 
     <TextView
         android:id="@+id/textView"

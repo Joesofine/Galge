@@ -18,8 +18,7 @@ public class Spil extends AppCompatActivity {
     EditText in;
     ImageView galge;
     int i = 0;
-    String ordet;
-    String forkerte;
+    String ordet, forkerte, valgtord;
 
 
     @Override
@@ -33,11 +32,22 @@ public class Spil extends AppCompatActivity {
         galge = findViewById(R.id.galge);
         in = findViewById(R.id.in);
 
-
+        ordet = logik.getOrdet();
         ord.setText(logik.getSynligtOrd());
 
+        /**
+        Intent intent = getIntent();
+        Bundle ordvalg = intent.getExtras();
 
-        ordet = logik.getOrdet();
+        ordet = ordvalg.getString("Valgtord");
+        ord.setText(logik.setSynligtOrd(ordet));
+
+        if (ordvalg.getString("Valgtord").isEmpty()){
+            ordet = logik.getOrdet();
+            ord.setText(logik.getSynligtOrd());
+        } else {
+            ordet = ordvalg.getString("Valgtord");
+        } */
 
         logik.logStatus(); // Så vi kan se det rigtige ord i loggen
 
