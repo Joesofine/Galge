@@ -66,29 +66,13 @@
         app:layout_constraintVertical_bias="0.076" />
 
     <Button
-        android:id="@+id/again"
-        android:layout_width="115dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/button_gradient"
-        android:text="Spil igen"
-        app:layout_constraintEnd_toStartOf="@+id/tilbage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
         android:id="@+id/tilbage"
         android:layout_width="115dp"
         android:layout_height="75dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
         android:background="@drawable/button_gradient"
         android:text="Hovedemenu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
