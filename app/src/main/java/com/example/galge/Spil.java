@@ -32,34 +32,23 @@ public class Spil extends AppCompatActivity {
         galge = findViewById(R.id.galge);
         in = findViewById(R.id.in);
 
-        ordet = logik.getOrdet();
-        ord.setText(logik.getSynligtOrd());
-
-        /**
         Intent intent = getIntent();
-        Bundle ordvalg = intent.getExtras();
+        final Bundle ordvalg = intent.getExtras();
 
         ordet = ordvalg.getString("Valgtord");
-        ord.setText(logik.setSynligtOrd(ordet));
-
-        if (ordvalg.getString("Valgtord").isEmpty()){
-            ordet = logik.getOrdet();
-            ord.setText(logik.getSynligtOrd());
-        } else {
-            ordet = ordvalg.getString("Valgtord");
-        } */
+        logik.setSynligtOrd(ordet);
+        ord.setText(logik.getSynligtOrd());
 
         logik.logStatus(); // Så vi kan se det rigtige ord i loggen
+
 
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String bogstav = in.getText().toString();
-                logik.gætBogstav(bogstav);
+                logik.gætBogstav(bogstav, ordet);
                 in.setText("");
                 in.setError(null);
-                ord.setText(logik.getSynligtOrd());
-
                 if (!logik.erSidsteBogstavKorrekt()) {
                     i = i + 1;
 
@@ -76,6 +65,8 @@ public class Spil extends AppCompatActivity {
                     else if (i == 6)
                         galge.setImageResource(R.drawable.forkert6);
                 }
+                logik.setSynligtOrd(ordet);
+                ord.setText(logik.getSynligtOrd());
                 opdaterSkærm();
             }
         });

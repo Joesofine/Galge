@@ -46,7 +46,7 @@ public class Galgelogik {
     public String getSynligtOrd() {
         return synligtOrd;
     }
-/**
+
     public String setSynligtOrd(String ord) {
         synligtOrd = "";
         spilletErVundet = true;
@@ -60,7 +60,7 @@ public class Galgelogik {
             }
         }
         return synligtOrd;
-    } */
+    }
 
 
 public String setOrdet(String ord) {
@@ -96,7 +96,7 @@ public String setOrdet(String ord) {
         antalForkerteBogstaver = 0;
         spilletErVundet = false;
         spilletErTabt = false;
-        ordet = muligeOrd.get(new Random().nextInt(muligeOrd.size()));
+        ordet = "j";
         opdaterSynligtOrd();
     }
 
@@ -115,7 +115,7 @@ public String setOrdet(String ord) {
         }
     }
 
-    public void gætBogstav(String bogstav) {
+    public void gætBogstav(String bogstav, String ord) {
         if (bogstav.length() != 1) return;
         System.out.println("Der gættes på bogstavet: " + bogstav);
         if (brugteBogstaver.contains(bogstav)) return;
@@ -123,7 +123,7 @@ public String setOrdet(String ord) {
 
         brugteBogstaver.add(bogstav);
 
-        if (ordet.contains(bogstav)) {
+        if (ord.contains(bogstav)) {
             sidsteBogstavVarKorrekt = true;
             System.out.println("Bogstavet var korrekt: " + bogstav);
         } else {
@@ -221,6 +221,22 @@ public String setOrdet(String ord) {
 
         System.out.println("muligeOrd = " + muligeOrd);
         nulstil();
+    }
+
+    public void hentOrdFraArray(){
+        muligeOrd.clear();
+        muligeOrd.add("bil");
+        muligeOrd.add("computer");
+        muligeOrd.add("programmering");
+        muligeOrd.add("motorvej");
+        muligeOrd.add("busrute");
+        muligeOrd.add("gangsti");
+        muligeOrd.add("skovsnegl");
+        muligeOrd.add("solsort");
+        muligeOrd.add("nitten");
+
+        System.out.println("muligeOrd = " + muligeOrd);
+
     }
 }
 

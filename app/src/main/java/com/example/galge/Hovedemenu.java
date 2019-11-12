@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Hovedemenu extends AppCompatActivity {
 
-   Button ins, start, hjalp, liste, niveau;
+   Button ins, niveau,valg;
    TextView velkommen;
 
 
@@ -20,11 +20,9 @@ public class Hovedemenu extends AppCompatActivity {
         setContentView(R.layout.hovedemenu);
 
         ins = findViewById(R.id.ins);
-        start = findViewById(R.id.start);
-        hjalp = findViewById(R.id.hjalp);
         velkommen = findViewById(R.id.textView);
-        liste = findViewById(R.id.liste);
         niveau =findViewById(R.id.niveau);
+        valg = findViewById(R.id.valg);
 
 
         ins.setOnClickListener(new View.OnClickListener() {
@@ -35,34 +33,18 @@ public class Hovedemenu extends AppCompatActivity {
             }
         });
 
-        start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Spil.class);
-                startActivity(intent);
-            }
-        });
-
-        hjalp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Hjalp.class);
-                startActivity(intent);
-            }
-        });
-
-        liste.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Ordliste.class);
-                startActivity(intent);
-            }
-        });
 
         niveau.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Niveau.class);
+                startActivity(intent);
+            }
+        });
+        valg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NiveauValg.class);
                 startActivity(intent);
             }
         });

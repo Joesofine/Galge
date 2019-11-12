@@ -15,7 +15,7 @@ import static android.media.MediaPlayer.*;
 public class Vundet extends AppCompatActivity {
 
     TextView forkert;
-    Button again, tilbage;
+    Button tilbage;
     MediaPlayer lyd;
 
 
@@ -25,7 +25,6 @@ public class Vundet extends AppCompatActivity {
         setContentView(R.layout.vundet);
 
         forkert = findViewById(R.id.forkert);
-        again = findViewById(R.id.again);
         tilbage = findViewById(R.id.tilbage);
         lyd = MediaPlayer.create(this, R.raw.cher);
         lyd.setVolume(1,1);
@@ -45,14 +44,6 @@ public class Vundet extends AppCompatActivity {
         forkert.setText(fejl.getString("forkert")+"!");
 
         lyd.start();
-
-        again.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Spil.class);
-                startActivity(intent);
-            }
-        });
 
         tilbage.setOnClickListener(new View.OnClickListener() {
             @Override

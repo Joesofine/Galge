@@ -50,7 +50,7 @@ public class Tabt extends AppCompatActivity {
         again.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Spil.class);
+                Intent intent = new Intent(getApplicationContext(), Hovedemenu.class);
                 startActivity(intent);
             }
         });

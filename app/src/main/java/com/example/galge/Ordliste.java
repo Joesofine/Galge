@@ -30,7 +30,6 @@ public class Ordliste extends AppCompatActivity implements AdapterView.OnItemCli
 
         listView.setOnItemClickListener(this);
         listView.setAdapter(adapter);
-
         listView.setSelector(R.color.colorMoonstoneLight);
 
 
@@ -41,13 +40,12 @@ public class Ordliste extends AppCompatActivity implements AdapterView.OnItemCli
 
         Toast.makeText(this, logik.getOrdet(), Toast.LENGTH_SHORT).show();
 
-/**
+
         Bundle ordvalg = new Bundle();
         ordvalg.putString("Valgtord", ValgtOrd);
-        Intent intent = new Intent(getApplicationContext(), Vundet.class);
+        Intent intent = new Intent(getApplicationContext(), Spil.class);
         intent.putExtras(ordvalg);
         startActivity(intent);
- */
     }
 }
 

@@ -11,8 +11,8 @@
         android:id="@+id/dr"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/button_gradient"
         android:text="DR"
@@ -23,14 +23,29 @@
         android:id="@+id/et"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginTop="70dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginBottom="44dp"
         android:background="@drawable/button_gradient"
         android:text="1"
         app:layout_constraintBottom_toTopOf="@+id/list"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/to"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/array"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/button_gradient"
+        android:text="Default "
+        app:layout_constraintBottom_toTopOf="@+id/list"
+        app:layout_constraintEnd_toStartOf="@+id/et"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -38,20 +53,20 @@
         android:id="@+id/to"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/button_gradient"
         android:text="2"
-        app:layout_constraintStart_toEndOf="@+id/et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tre"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/button_gradient"
         android:text="3"
@@ -68,7 +83,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dr" />
 
     <TextView
-        android:id="@+id/info"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

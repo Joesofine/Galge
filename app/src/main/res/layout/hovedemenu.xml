@@ -8,29 +8,29 @@
     tools:context=".Hovedemenu">
 
     <Button
-        android:id="@+id/liste"
+        android:id="@+id/valg"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/button_gradient"
-        android:text="liste"
-        app:layout_constraintTop_toBottomOf="@+id/start"
-        tools:layout_editor_absoluteX="158dp" />
+        android:text="Spil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/niveau"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/button_gradient"
-        android:text="Niveau"
-        app:layout_constraintEnd_toStartOf="@+id/liste"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ins" />
+        android:text="Se ord"
+        app:layout_constraintStart_toEndOf="@+id/valg"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
@@ -58,31 +58,7 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/button_gradient"
         android:text="Meme"
-        app:layout_constraintEnd_toStartOf="@+id/start"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/start"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button_gradient"
-        android:text="Start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/hjalp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button_gradient"
-        android:text="Hjælp"
-        app:layout_constraintStart_toEndOf="@+id/start"
+        app:layout_constraintEnd_toStartOf="@+id/valg"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView

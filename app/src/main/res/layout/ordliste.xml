@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_gravity="top"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         android:foregroundGravity="top|center_vertical|clip_horizontal"
         android:gravity="center"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
@@ -39,15 +39,15 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
-        android:text="Vælg et ord fra den understående liste, for at starte spilletmed det pågældende ord."
+        android:text="Vælg et ord fra den understående liste, for at starte spillet med det pågældende ord."
         android:textColor="#050000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
