@@ -125,7 +125,7 @@ public class Niveau extends AppCompatActivity implements AdapterView.OnItemClick
             }
             @Override
             protected void onPostExecute(Object resultat) {
-                info.setText("Færdig: " + resultat );
+                info.setText("Færdig!" );
             }
         }.execute();
     }

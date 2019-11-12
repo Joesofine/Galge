@@ -34,7 +34,7 @@ public class NiveauValg extends AppCompatActivity {
         to = findViewById(R.id.to);
         tre = findViewById(R.id.tre);
         array = findViewById(R.id.array);
-        liste = findViewById(R.id.liste);
+        liste = findViewById(R.id.tekst);
 
 
 
@@ -90,7 +90,7 @@ public class NiveauValg extends AppCompatActivity {
         liste.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Ordliste.class);
+                Intent intent = new Intent(getApplicationContext(), Niveau.class);
                 startActivity(intent);
             }
         });

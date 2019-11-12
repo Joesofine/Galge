@@ -8,7 +8,7 @@
     tools:context=".Niveau">
 
     <Button
-        android:id="@+id/liste"
+        android:id="@+id/tekst"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="89dp"
@@ -36,37 +36,37 @@
         android:id="@+id/to"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="211dp"
         android:background="@drawable/button_gradient"
         android:text="2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/info" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/et"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="211dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/button_gradient"
         android:text="1"
         app:layout_constraintEnd_toStartOf="@+id/to"
-        app:layout_constraintTop_toBottomOf="@+id/info" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/array"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="211dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/button_gradient"
         android:text="Default "
         app:layout_constraintEnd_toStartOf="@+id/et"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/tre"
@@ -74,11 +74,11 @@
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="211dp"
         android:background="@drawable/button_gradient"
         android:text="3"
         app:layout_constraintStart_toEndOf="@+id/to"
-        app:layout_constraintTop_toBottomOf="@+id/info" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/dr"
@@ -86,15 +86,15 @@
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="211dp"
         android:background="@drawable/button_gradient"
         android:text="DR"
         app:layout_constraintStart_toEndOf="@+id/tre"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:gravity="center"
@@ -107,11 +107,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/liste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Eller vælg ord fra liste"
+        android:textColor="#090000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

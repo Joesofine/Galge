@@ -6,12 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class Hovedemenu extends AppCompatActivity {
 
-   Button ins, niveau,valg;
-   TextView velkommen;
+   Button ins,valg;
 
 
     @Override
@@ -20,8 +18,6 @@ public class Hovedemenu extends AppCompatActivity {
         setContentView(R.layout.hovedemenu);
 
         ins = findViewById(R.id.ins);
-        velkommen = findViewById(R.id.textView);
-        niveau =findViewById(R.id.niveau);
         valg = findViewById(R.id.valg);
 
 
@@ -33,14 +29,6 @@ public class Hovedemenu extends AppCompatActivity {
             }
         });
 
-
-        niveau.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Niveau.class);
-                startActivity(intent);
-            }
-        });
         valg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
