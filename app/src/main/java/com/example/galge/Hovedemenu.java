@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Hovedemenu extends AppCompatActivity {
 
-   Button ins,valg;
+   Button ins, valg, high;
 
 
     @Override
@@ -19,6 +19,7 @@ public class Hovedemenu extends AppCompatActivity {
 
         ins = findViewById(R.id.ins);
         valg = findViewById(R.id.valg);
+        high = findViewById(R.id.high);
 
 
         ins.setOnClickListener(new View.OnClickListener() {
@@ -36,5 +37,14 @@ public class Hovedemenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        high.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Highscore.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

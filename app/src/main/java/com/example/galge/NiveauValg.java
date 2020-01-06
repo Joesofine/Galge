@@ -18,7 +18,7 @@ public class NiveauValg extends AppCompatActivity {
     Button dr, ark, et, to, tre, array, liste;
     TextView info;
     Galgelogik logik = new Galgelogik();
-    String ValgtOrd, RanOrd, one, two, three, web;
+    String ValgtOrd, RanOrd, one = "one", two = "two", three = "three", web = "web";
     private ArrayList<String> ordliste;
 
 
@@ -53,7 +53,6 @@ public class NiveauValg extends AppCompatActivity {
             public void onClick(View v) {
                 info.setText("Henter ord fra regneark...");
                 hentOrd(one);
-                gemOrd();
             }
         });
 
@@ -63,7 +62,6 @@ public class NiveauValg extends AppCompatActivity {
             public void onClick(View v) {
                 info.setText("Henter ord fra regneark...");
                 hentOrd(two);
-                gemOrd();
             }
         });
 
@@ -73,7 +71,6 @@ public class NiveauValg extends AppCompatActivity {
 
                 info.setText("Henter ord fra regneark...");
                 hentOrd(three);
-                gemOrd();
             }
         });
 
@@ -83,7 +80,6 @@ public class NiveauValg extends AppCompatActivity {
 
                 info.setText("Henter ord fra DRs server....");
                 hentOrd(web);
-                gemOrd();
             }
         });
 
@@ -115,28 +111,31 @@ public class NiveauValg extends AppCompatActivity {
         new AsyncTask(){
             protected Object doInBackground(Object... arg0) {
                 try {
-                    if (from == one){
+                    if (from.equals(one)){
                         logik.hentOrdFraRegneark("1");
-                    } else if (from == two){
+
+                    } else if (from.equals(two)){
                         logik.hentOrdFraRegneark("2");
-                    }else if (from == three){
+
+                    }else if (from.equals(three)){
                         logik.hentOrdFraRegneark("3");
-                    }else if (from == web){
+
+                    }else if (from.equals(web)){
                         logik.hentOrdFraDr();
                     }
 
-                    return "Ordene blev korrekt hentet fra regneark";
+                    return "Ordene blev hentet";
 
                 } catch (Exception e) {
                     e.printStackTrace();
-                    return"Ordene blev ikke hentet korrekt: ";
+                    return"Ordene blev ikke hentet";
                 }
             }
             @Override
             protected void onPostExecute(Object resultat) {
+                gemOrd();
                 info.setText("Færdig:\n" + resultat );
             }
         }.execute();
     }
-
 }

@@ -96,7 +96,7 @@ public String setOrdet(String ord) {
         antalForkerteBogstaver = 0;
         spilletErVundet = false;
         spilletErTabt = false;
-        ordet = "j";
+        ordet = "";
         opdaterSynligtOrd();
     }
 
@@ -202,11 +202,8 @@ public String setOrdet(String ord) {
 
     public void hentOrdFraRegneark(String sværhedsgrader) throws Exception {
         String id = "15uB64aBX8F8zlazzz0I19sGH27nH8DqOJxJmb6cyjzQ";
-
         System.out.println("Henter data som kommasepareret CSV fra regnearket https://docs.google.com/spreadsheets/d/"+id+"/edit?usp=sharing");
-
         String data = hentUrl("https://docs.google.com/spreadsheets/d/" + id + "/export?format=csv&id=" + id);
-        int linjeNr = 0;
 
         muligeOrd.clear();
         for (String linje : data.split("\n")) {

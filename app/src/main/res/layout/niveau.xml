@@ -9,69 +9,68 @@
 
     <Button
         android:id="@+id/dr"
-        android:layout_width="70dp"
+        android:layout_width="65dp"
         android:layout_height="40dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="31dp"
         android:background="@drawable/button_gradient"
         android:text="DR"
         app:layout_constraintStart_toEndOf="@+id/tre"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/et"
-        android:layout_width="70dp"
+        android:layout_width="65dp"
         android:layout_height="40dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
         android:layout_marginBottom="44dp"
         android:background="@drawable/button_gradient"
         android:text="1"
         app:layout_constraintBottom_toTopOf="@+id/list"
         app:layout_constraintEnd_toStartOf="@+id/to"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/array"
-        android:layout_width="70dp"
+        android:layout_width="65dp"
         android:layout_height="40dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
         android:layout_marginBottom="44dp"
         android:background="@drawable/button_gradient"
         android:text="Default "
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/list"
         app:layout_constraintEnd_toStartOf="@+id/et"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/to"
-        android:layout_width="70dp"
+        android:layout_width="65dp"
         android:layout_height="40dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="31dp"
         android:background="@drawable/button_gradient"
         android:text="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/tre"
-        android:layout_width="70dp"
+        android:layout_width="65dp"
         android:layout_height="40dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="31dp"
         android:background="@drawable/button_gradient"
         android:text="3"
         app:layout_constraintStart_toEndOf="@+id/to"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <ListView
         android:id="@+id/list"
@@ -90,7 +89,7 @@
         android:gravity="center"
         android:text="Vælg sværhedsgrad"
         android:textColor="#110000"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

@@ -52,6 +52,7 @@ public class Tabt extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Hovedemenu.class);
                 startActivity(intent);
+                lyd.stop();
             }
         });
     }

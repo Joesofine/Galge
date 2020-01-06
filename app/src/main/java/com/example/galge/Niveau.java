@@ -41,6 +41,8 @@ public class Niveau extends AppCompatActivity implements AdapterView.OnItemClick
 
         list.setAdapter(adapter);
         list.setOnItemClickListener(this);
+        list.setSelector(R.color.colorMoonstoneLight);
+
 
 
         array.setOnClickListener(new View.OnClickListener() {
