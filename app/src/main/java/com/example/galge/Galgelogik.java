@@ -7,7 +7,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Random;
 
 public class Galgelogik {
 
@@ -20,6 +19,7 @@ public class Galgelogik {
     private boolean sidsteBogstavVarKorrekt;
     private boolean spilletErVundet;
     private boolean spilletErTabt;
+    private int score;
 
     public Galgelogik() {
         muligeOrd.add("bil");
@@ -34,59 +34,21 @@ public class Galgelogik {
         nulstil();
     }
 
-
-    public ArrayList<String> getMuligeOrd() {
-        return muligeOrd;
-    }
-
-    public ArrayList<String> getBrugteBogstaver() {
-        return brugteBogstaver;
-    }
-
-    public String getSynligtOrd() {
-        return synligtOrd;
-    }
-
-    public String setSynligtOrd(String ord) {
-        synligtOrd = "";
-        spilletErVundet = true;
-        for (int n = 0; n < ord.length(); n++) {
-            String bogstav = ord.substring(n, n + 1);
-            if (brugteBogstaver.contains(bogstav)) {
-                synligtOrd = synligtOrd + bogstav;
-            } else {
-                synligtOrd = synligtOrd + "_ ";
-                spilletErVundet = false;
-            }
-        }
-        return synligtOrd;
-    }
-
-
-public String setOrdet(String ord) {
-        ordet = ord;
-        return ordet;
-    }
-    public String getOrdet() {
-        return ordet;
-    }
-
-    public int getAntalForkerteBogstaver() {
-        return antalForkerteBogstaver;
+    public void calculateScore() {
+        int points = 100;
+        points -= antalForkerteBogstaver * ordet.length();
+        score = points;
     }
 
     public boolean erSidsteBogstavKorrekt() {
         return sidsteBogstavVarKorrekt;
     }
-
     public boolean erSpilletVundet() {
         return spilletErVundet;
     }
-
     public boolean erSpilletTabt() {
         return spilletErTabt;
     }
-
     public boolean erSpilletSlut() {
         return spilletErTabt || spilletErVundet;
     }
@@ -99,7 +61,6 @@ public String setOrdet(String ord) {
         ordet = "";
         opdaterSynligtOrd();
     }
-
 
     private void opdaterSynligtOrd() {
         synligtOrd = "";
@@ -169,7 +130,6 @@ public String setOrdet(String ord) {
      */
     public void hentOrdFraDr() throws Exception {
         String data = hentUrl("https://dr.dk");
-        //System.out.println("data = " + data);
 
         data = data.substring(data.indexOf("<body")). // fjern headere
                 replaceAll("<.+?>", " ").toLowerCase(). // fjern tags
@@ -234,6 +194,46 @@ public String setOrdet(String ord) {
 
         System.out.println("muligeOrd = " + muligeOrd);
 
+    }
+    // Getter and Setters
+    public String getScoreString() {
+        return "" + score;
+    }
+    public int getScoreInt() {return score;}
+    public ArrayList<String> getMuligeOrd() {
+        return muligeOrd;
+    }
+    public ArrayList<String> getBrugteBogstaver() {
+        return brugteBogstaver;
+    }
+    public String getSynligtOrd() {
+        return synligtOrd;
+    }
+    public String getOrdet() {
+        return ordet;
+    }
+    public int getAntalForkerteBogstaver() {
+        return antalForkerteBogstaver;
+    }
+
+    public String setSynligtOrd(String ord) {
+        synligtOrd = "";
+        spilletErVundet = true;
+        for (int n = 0; n < ord.length(); n++) {
+            String bogstav = ord.substring(n, n + 1);
+            if (brugteBogstaver.contains(bogstav)) {
+                synligtOrd = synligtOrd + bogstav;
+            } else {
+                synligtOrd = synligtOrd + "_ ";
+                spilletErVundet = false;
+            }
+        }
+        return synligtOrd;
+    }
+
+    public String setOrdet(String ord) {
+        ordet = ord;
+        return ordet;
     }
 }
 

@@ -7,66 +7,18 @@
     android:background="@drawable/background_gradient"
     tools:context=".Highscore">
 
-    <Button
-        android:id="@+id/to2"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/button_gradient"
-        android:text="2"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/done"
+        app:backgroundTint="@color/colorMoonstone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/dr2"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/button_gradient"
-        android:text="DR"
-        app:layout_constraintStart_toEndOf="@+id/tre2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/et2"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        android:background="@drawable/button_gradient"
-        android:text="1"
-        app:layout_constraintEnd_toStartOf="@+id/to2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/array2"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        android:background="@drawable/button_gradient"
-        android:text="Default "
-        android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/et2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/tre2"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/button_gradient"
-        android:text="3"
-        app:layout_constraintStart_toEndOf="@+id/to2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:layout_marginRight="30dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -81,22 +33,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/valg"
-        android:layout_width="wrap_content"
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Væl sværhedsgrad der skal vises"
-        android:textColor="#0A0101"
+        android:layout_marginTop="32dp"
+        app:backgroundTint="@color/colorMoonstoneLight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/to2"
-        tools:layout_editor_absoluteX="1dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

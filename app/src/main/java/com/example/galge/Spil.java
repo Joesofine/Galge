@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class Spil extends AppCompatActivity {
 
-    Galgelogik logik = new Galgelogik();
+    static Galgelogik logik = new Galgelogik();
     Button test;
     TextView regler, ord;
     EditText in;
@@ -36,6 +36,7 @@ public class Spil extends AppCompatActivity {
         final Bundle ordvalg = intent.getExtras();
 
         ordet = ordvalg.getString("Valgtord");
+        logik.setOrdet(ordet);
         logik.setSynligtOrd(ordet);
         ord.setText(logik.getSynligtOrd());
 
@@ -81,17 +82,25 @@ public class Spil extends AppCompatActivity {
 
             Bundle fejl = new Bundle();
             fejl.putString("forkert", forkerte);
-            Intent intent = new Intent(getApplicationContext(), Vundet.class);
+            Intent intent = new Intent(this, Vundet.class);
             intent.putExtras(fejl);
             startActivity(intent);
+            finish();
+
         }
         if (logik.erSpilletTabt()) {
             Bundle whatever = new Bundle();
             whatever.putString("ord", ordet);
-            Intent intent = new Intent(getApplicationContext(), Tabt.class);
+            Intent intent = new Intent(this, Tabt.class);
             intent.putExtras(whatever);
             startActivity(intent);
+            finish();
         }
+    }
+    @Override
+    public void onBackPressed(){
+        Spil.logik.nulstil();
+        finish();
     }
 }
 

@@ -8,9 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Hovedemenu extends AppCompatActivity {
-
    Button ins, valg, high;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

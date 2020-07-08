@@ -53,7 +53,14 @@ public class Tabt extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Hovedemenu.class);
                 startActivity(intent);
                 lyd.stop();
+                Spil.logik.nulstil();
             }
         });
+    }
+    @Override
+    public void onBackPressed(){
+        lyd.stop();
+        Spil.logik.nulstil();
+        finish();
     }
 }

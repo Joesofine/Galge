@@ -27,7 +27,6 @@ public class Niveau extends AppCompatActivity implements AdapterView.OnItemClick
 
         info = findViewById(R.id.title);
         dr = findViewById(R.id.dr);
-        ark = findViewById(R.id.et);
         list = findViewById(R.id.list);
         et = findViewById(R.id.et);
         to = findViewById(R.id.to);
@@ -94,6 +93,7 @@ public class Niveau extends AppCompatActivity implements AdapterView.OnItemClick
 
         ValgtOrd = logik.setOrdet(logik.getMuligeOrd().get(position));
 
+        //Printer en toast med ordet der skal gættes - bruges til at teste appen. Har valgt at lade den feature blive.
         Toast.makeText(this, logik.getOrdet(), Toast.LENGTH_SHORT).show();
 
         Bundle ordvalg = new Bundle();

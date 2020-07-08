@@ -98,6 +98,7 @@ public class NiveauValg extends AppCompatActivity {
         RanOrd = ordliste.get(new Random().nextInt(ordliste.size()));
         ValgtOrd = logik.setOrdet(RanOrd);
 
+        //Printer en toast med ordet der skal gættes - bruges til at teste appen. Har valgt at lade den feature blive.
         Toast.makeText(getApplicationContext(), logik.getOrdet(), Toast.LENGTH_SHORT).show();
 
         Bundle ordvalg = new Bundle();
